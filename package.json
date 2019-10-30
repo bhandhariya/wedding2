@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "heroku-postbuild": "ng build --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -45,5 +46,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "engines": {
+    "node": "10.15.2",
+    "npm": "6.12.1"
   }
 }
