@@ -19,7 +19,10 @@ const app = express();
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/aiproj'));
+app.use('/app',express.static('public'),function(req,res){
 
+res.sendFile(path.join(__dirname+'/public/index.html'));
+})
 app.get('/*', function(req,res) {
     
 res.sendFile(path.join(__dirname+'/dist/aiproj/index.html'));
